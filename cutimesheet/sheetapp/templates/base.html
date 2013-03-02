@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Title{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}/assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="{{ STATIC_URL }}/assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="{{ STATIC_URL }}/assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="{{ STATIC_URL }}/assets/ico/favicon.png">
+  </head>
+
+  <body bgcolor=87cefa>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+Start Time A:
+<select name="hour">
+    <option value="1">01:</option>
+    <option value="2">02:</option>
+    <option value="3">03:</option>
+    <option value="4">04:</option>
+    <option value="5">05:</option>
+    <option value="6">06:</option>
+    <option value="7">07:</option>
+    <option value="8">08:</option>
+    <option value="9">09:</option>
+    <option value="10">10:</option>
+    <option value="11">11:</option>
+    <option value="12">12:</option>
+</select>
+
+<select name="minutes">
+    <option value="1">00</option>
+    <option value="2">15</option>
+    <option value="3">30</option>
+    <option value="4">45</option>
+</select>
+
+<select name="ampm">
+    <option value ="1">AM</option>
+    <option value ="2">PM</option>
+</select>
+
+<br><br>
+End Time A:
+<select name="hour">
+    <option value="1">01:</option>
+    <option value="2">02:</option>
+    <option value="3">03:</option>
+    <option value="4">04:</option>
+    <option value="5">05:</option>
+    <option value="6">06:</option>
+    <option value="7">07:</option>
+    <option value="8">08:</option>
+    <option value="9">09:</option>
+    <option value="10">10:</option>
+    <option value="11">11:</option>
+    <option value="12">12:</option>
+</select>
+
+<select name="minutes">
+    <option value="1">00</option>
+    <option value="2">15</option>
+    <option value="3">30</option>
+    <option value="4">45</option>
+</select>
+
+<select name="ampm">
+    <option value ="1">AM</option>
+    <option value ="2">PM</option>
+</select>
+
+
+
+<br><br><br>
+Start Time B:
+<select name="hour">
+    <option value="1">01:</option>
+    <option value="2">02:</option>
+    <option value="3">03:</option>
+    <option value="4">04:</option>
+    <option value="5">05:</option>
+    <option value="6">06:</option>
+    <option value="7">07:</option>
+    <option value="8">08:</option>
+    <option value="9">09:</option>
+    <option value="10">10:</option>
+    <option value="11">11:</option>
+    <option value="12">12:</option>
+</select>
+
+<select name="minutes">
+    <option value="1">00</option>
+    <option value="2">15</option>
+    <option value="3">30</option>
+    <option value="4">45</option>
+</select>
+
+<select name="ampm">
+    <option value ="1">AM</option>
+    <option value ="2">PM</option>
+</select>
+
+<br><br>
+End Time B:
+<select name="hour">
+    <option value="1">01:</option>
+    <option value="2">02:</option>
+    <option value="3">03:</option>
+    <option value="4">04:</option>
+    <option value="5">05:</option>
+    <option value="6">06:</option>
+    <option value="7">07:</option>
+    <option value="8">08:</option>
+    <option value="9">09:</option>
+    <option value="10">10:</option>
+    <option value="11">11:</option>
+    <option value="12">12:</option>
+</select>
+
+<select name="minutes">
+    <option value="1">00</option>
+    <option value="2">15</option>
+    <option value="3">30</option>
+    <option value="4">45</option>
+</select>
+
+<select name="ampm">
+    <option value ="1">AM</option>
+    <option value ="2">PM</option>
+</select>
+
+
+<br><br><br><br>
+By pressing submit, I affirm that the contents of this form are true to the best of my knowledge.
+
+
+<br><br><br>
+<button type="button|submit|reset">Submit Hours</button>
+
+
+
+          <div class="nav-collapse collapse">
+              {% block nav %}
+            <ul class="nav">
+
+
+                
+
+
+          </ul>
+               {% endblock %}
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        {% block content %}
+            <p>Default content</p>
+        {% endblock %}
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ STATIC_URL }}/assets/js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-transition.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-alert.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-modal.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-dropdown.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-tab.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-tooltip.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-popover.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-button.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-carousel.js"></script>
+    <script src="{{ STATIC_URL }}/assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

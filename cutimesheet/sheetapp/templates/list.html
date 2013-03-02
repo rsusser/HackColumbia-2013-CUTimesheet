@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    All Posts
+{% endblock %}
+
+{% block content %}
+<h1>Posts</h1>
+{% if posts %}
+    {% for post in posts %}
+        <section class="post">
+            <h2>{{ post.title }}</h2>
+            <span>Author: {{ post.author }}</span>
+            <p>{{ post.content }}</p>
+        </section>
+	<section class="comment">
+	    <p>Comment: {{ post.comment.content }}</p>
+	</section>
+    {% endfor %}
+{% else %}
+    <p>I don't have any posts sorry.</p>
+{% endif %}
+{% endblock %}
